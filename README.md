@@ -1,5 +1,7 @@
 # Repairing ElasticSearch
 
+**by default *dry_run=True* when you set it to false you are potetially chosing to overwrite primary shards ** 
+
 Basically we managed to delete the same disk on each of 12 nodes. This had the effect of killing a lot of primary shards and leaving the cluster in an unrecoverable state. This is the script i used to bring it back to green.
 
 We've lost data - but I don't want to loose the whole index because of 1 lost primary shard. 
